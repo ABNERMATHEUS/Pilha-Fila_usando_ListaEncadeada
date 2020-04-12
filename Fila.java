@@ -18,11 +18,12 @@ public class Fila {
             System.out.println("Vazia");
             return -1;
         }
-        return lista.removeUltimo().getInformação();
+        return lista.removeUltimo().getInformacao();
     }
 
     public void mostra_fila() {
         lista.imprime();
     }
+
 
 }

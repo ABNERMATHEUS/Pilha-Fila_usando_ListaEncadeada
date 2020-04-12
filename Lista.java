@@ -11,7 +11,7 @@ public class Lista {
 
     public void insereUltimo(int elemento) {
         Node nova = new Node();
-        nova.setInformação(elemento);
+        nova.setInformacao(elemento);
         nova.setProximo(null);
 
 
@@ -55,15 +55,15 @@ public class Lista {
             aux = aux.getProximo();
         }
 
-        return aux.getInformação();
+        return aux.getInformacao();
     }
 
     public int InserePrimeiro(int elemento) {
         Node nova = new Node();
-        nova.setInformação(elemento);
+        nova.setInformacao(elemento);
         nova.setProximo(inicio);
         inicio = nova;
-        return nova.getInformação();
+        return nova.getInformacao();
     }
 
 
@@ -76,7 +76,7 @@ public class Lista {
                 return;
             }
             while (aux != null) {
-                System.out.println(aux.getInformação());
+                System.out.println(aux.getInformacao());
                 aux = aux.getProximo();
             }
         }
@@ -84,7 +84,7 @@ public class Lista {
     }
 
     public boolean vazia() {
-        return this.inicio.getProximo() == null;
+        return this.inicio == null;
     }
 
 
@@ -105,5 +105,27 @@ public class Lista {
             return cont;
         }
         return -1;
+    }
+
+    public void insereOrdenado(int elemento){
+        Node nova = new Node();
+        nova.setInformacao(elemento);
+        Node aux = inicio;
+        Node anterior;
+        Node proximo;
+
+        while (aux.getProximo()!= null){
+            if(aux.getInformacao() < nova.getInformacao()){
+                anterior = aux;
+                proximo = anterior.getProximo();
+                anterior.setProximo(nova);
+                nova.setProximo(proximo);
+                aux = aux.getProximo();
+            }else{
+                aux = aux.getProximo();
+            }
+        }
+
+
     }
 }

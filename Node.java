@@ -3,20 +3,21 @@ package Lista_Fila_Pilha;
 public class Node {
 
 
-    private int informação ;
+    private int informacao;
     private Node proximo;
 
     public Node() {
         this.proximo = null;
     }
 
-    public int getInformação() {
-        return informação;
+    public int getInformacao() {
+        return informacao;
     }
 
-    public void setInformação(int informação) {
-        this.informação = informação;
+    public void setInformacao(int informação) {
+        this.informacao = informação;
     }
+
 
     public Node getProximo() {
         return proximo;

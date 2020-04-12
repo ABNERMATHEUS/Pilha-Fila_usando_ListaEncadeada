@@ -30,6 +30,15 @@ public class Main {
         System.out.println("==========================================");
 
 
+        Lista lista = new Lista();
+
+        lista.insereUltimo(33);
+        lista.InserePrimeiro(1);
+        lista.insereOrdenado(20);
+        lista.imprime();
+
+
+
 
 
 

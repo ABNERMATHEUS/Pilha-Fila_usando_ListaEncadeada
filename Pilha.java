@@ -21,10 +21,11 @@ public class Pilha {
             System.exit(0);
             return -1;
         }
-        return lista.removeUltimo().getInformação();
+        return lista.removeUltimo().getInformacao();
     }
 
     public void imprime() {
         lista.imprime();
     }
+
 }
